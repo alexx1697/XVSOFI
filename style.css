@@ -118,7 +118,7 @@ body {
   @media (max-width: 768px) {
     #banner img {
         height: auto;        /* Asegura que se mantenga su altura natural */
-        max-height: 800px;   /* Evita que sea exageradamente larga */
+        max-height: 100px;   /* Evita que sea exageradamente larga */
         object-fit: cover;
     }
 }
