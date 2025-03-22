@@ -1,0 +1,2 @@
+Para colores del background puedo utlizar:
+#f1e3d3
