@@ -107,13 +107,22 @@ body {
   #banner img {
     width: 100%;
     max-width: 100%;
-    height:max-content; /* Ocupa la mitad superior de la pantalla */
-    object-fit:fill cover; /* Ajusta la imagen para que no se deforme */
+    height: auto;        /* Mantiene la proporción natural */
+    object-fit: cover;   /* Rellena sin deformar */
+    display: block;  
     opacity: 0; /* Empieza invisible */
     animation: fadeInImage 2s ease-in-out forwards;
     animation-delay: 0.5s; /* Pequeña pausa antes de que aparezca */
   }
   
+  @media (max-width: 768px) {
+    #banner img {
+        height: auto;        /* Asegura que se mantenga su altura natural */
+        max-height: 800px;   /* Evita que sea exageradamente larga */
+        object-fit: cover;
+    }
+}
+
   /* Animación de desvanecimiento para la imagen */
   @keyframes fadeInImage {
     from { opacity: 0; transform: scale(1.05); }  /* Empieza un poco más grande para efecto sutil */
